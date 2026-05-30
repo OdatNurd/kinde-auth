@@ -1,0 +1,41 @@
+{
+  "name": "@odatnurd/kinde-auth",
+  "version": "{{VERSION}}",
+  "description": "Authentication handling for Kinde auth",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "OdatNurd",
+    "email": "odatnurd@gmail.com",
+    "url": "https://odatnurd.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OdatNurd/kinde-auth"
+  },
+  "scripts": {
+    "build:dev": "rollup -c --environment BUILD_ENV:development",
+    "build:prod": "rollup -c --environment BUILD_ENV:production",
+    "watch": "rollup -c -w --environment BUILD_ENV:development",
+    "test": "echo \"Warning: no test specified\" && exit 0"
+  },
+  "exports": {
+    "./core": "./dist/core/index.js",
+    "./client": "./dist/client/index.js",
+    "./worker": "./dist/worker/index.js"
+  },
+  "devDependencies": {
+    "@kinde-oss/kinde-auth-pkce-js": "^4.3.0",
+    "@rollup/plugin-commonjs": "^29.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^1.0.0",
+    "jose": "^6.2.3",
+    "rollup": "^4.60.4"
+  },
+  "keywords": [
+    "kinde",
+    "auth",
+    "iam"
+  ],
+  "packageManager": "pnpm@11.5.0"
+}

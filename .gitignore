@@ -1,0 +1,5 @@
+# Exclude the workspace but keep the project
+*.sublime-*
+
+node_modules/
+dist/
